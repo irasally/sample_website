@@ -6,6 +6,8 @@
     path = "/"
   when "about"
     path = "/about"
+  when "コンタクト"
+    path = "/contacts"
   end
   visit path
 end
