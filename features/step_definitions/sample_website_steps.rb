@@ -1,10 +1,13 @@
 # encoding: utf-8
 
 もし /^"(.*?)"ページを表示する$/ do |page_name|
-  if page_name == "トップ"
+  case page_name
+  when "トップ"
     path = "/"
-    visit path
+  when "about"
+    path = "/about"
   end
+  visit path
 end
 
 ならば /^"(.*?)"と表示されていること$/ do |text|
